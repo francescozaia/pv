@@ -1,0 +1,18 @@
+:root {
+    --bs-body-bg: var(--bs-gray-100);
+    --bs-font-sans-serif: 'Noto Sans', sans-serif;
+    --bs-font-monospace: 'Wellfleet', monospace;
+}
+body {
+    font: 1rem/1.5 var(--bs-font-sans-serif);
+}
+.boxed {
+    min-height: 200px;
+    overflow-y: auto;
+}
+.boxed-fixed {
+    height: 200px;
+}
+.boxed table {
+    width: 100%;
+}

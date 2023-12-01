@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400;700;900&family=Wellfleet&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <h1>Gestione ordini PV</h1>
+            <div class="col-12 col-md-4 my-2">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Vai alla pagina HTML</div>
+                            Seleziona tutto con CTRL+A e poi copia con CTRL+C
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Clicca qui</div>
+                            Incolla con CTRL+V
+                            <p class="ok" style="display: none;">Tutto ok! Ho caricato la pagina HTML correttamente</p>
+                            <p class="no" style="display: none;">No sa! Controlla bene cos'hai copiato!</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-12 col-md-4 my-2">
+                <div class="border border-1 rounded p-3">
+                    <h3>Trovati:</h3>
+                    <p>Questi sono i PV che ho trovato nel file</p>
+                    <div id="yes" class="boxed boxed-fixed border border-primary font-monospace"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 my-2">
+                <div class="border border-1 rounded p-3">
+                    <h2>Non trovati:</h2>
+                    <p>Questi sono i PV che non ho trovato nel file</p>
+                    <div id="no" class="boxed boxed-fixed border border-primary font-monospace"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>Dettaglio articoli</h2>
+                <div class="border border-1 rounded p-3">
+                    <p>Selezionando la casella sulla destra si abilita la corrispondenza esatta del termine inserito</p>
+                    <div class="input-group my-3">
+                        <input type="text" id="articolo" class="form-control" placeholder="Inserisci l'articolo"
+                            aria-label="Articolo">
+                        <div class="input-group-text">
+                            <input class="form-check-input mt-0" type="checkbox" value="" id="ch"
+                                aria-label="Checkbox for following text input">
+                        </div>
+                        <button class="btn btn-outline-secondary" type="submit" id="btn">Cerca</button>
+                    </div>
+                    <div id="res" class="boxed border border-primary font-monospace"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div data-bs-delay="5000" class="toastOk toast align-items-center text-bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    HTML copiato correttamente
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div data-bs-delay="5000" class="toastNo toast align-items-center text-bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    No sa! controlla bene cos'hai copiato
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="pv.js"></script>
+    <script src="main.js"></script>
+</body>
+</body>
+
+</html>
